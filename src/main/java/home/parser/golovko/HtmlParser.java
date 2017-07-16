@@ -11,12 +11,14 @@ public class HtmlParser implements ParserAction {
     private String source;
 
     public List<String> parseCssQuery(String query) {
+        ArrayList<String> result = new ArrayList<String>();
 
         int i = source.indexOf("</button>");
         String s = source.substring(0,i);
 
         int ii = s.indexOf("<button");
         String ss = s.substring(ii +8, i);
+        result.add(ss);
 
 
         int dlinaSource = source.length();
@@ -27,8 +29,11 @@ public class HtmlParser implements ParserAction {
         //String s2 = rez.substring(dlina1, dlinaSource);
         int ii2 = rez.indexOf("<button");
         String ss2 = rez.substring(ii2 +8, kon);
+        result.add(ss2);
 
-        return new ArrayList<String>();
+
+
+        return result;
     }
 
     public void setSource(String source) {
