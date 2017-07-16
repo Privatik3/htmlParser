@@ -17,8 +17,8 @@ public class HtmlParser implements ParserAction {
         String s = source.substring(0,i);
 
         int ii = s.indexOf("<button");
-        String ss = s.substring(ii +8, i);
-        result.add(ss);
+        String s1 = s.substring(ii +8, i);
+        result.add(s1);
 
 
         int dlinaSource = source.length();
